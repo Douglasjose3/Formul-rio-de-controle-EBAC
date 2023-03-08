@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário EBAC</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo_ebac" src="./Images/logo_ebac.png" alt="logo da EBAC">
+            <h1>Formulário de controle</h1>     
+        </div>
+    </header>
+    <form id="form-AB">
+        <input type="number" id="campo-A-preenchido" required placeholder="Preencha com no máximo dois digitos!" />
+        <p class="error-message">
+            Este valor tem que ser menor que o seguinte!
+        </p>
+        <input type="number22" id="campo-B-preenchido" required placeholder="Este campo tem que ser maior que o anterior!" />
+        <button>
+            <div class="wrapper">
+                <i class="bi bi-send"></i>
+                <img class="icon_send" src="./Images/icon_send.png" alt="ícone de enviar">
+            </div>
+            <span>Enviar</span>
+        </button>
+    </form>
+    <p class="success-message"> </p>
+    <script src="./main.js"></script>
+        
+</body>
+</html>
