@@ -11,7 +11,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const campoBpreenchido = document.getElementById('campo-B-preenchido');
-    const mensagemSucesso = `O valor: <b>${campoApreenchido.value}</b> está correto camparando com o valor: <b>${campoBpreenchido.value}</b>.`;
+    const mensagemSucesso = `O dia do seu aniversário é: <b>${campoApreenchido.value}</b> e o ano do seu nascimento é : <b>${campoBpreenchido.value}</b>.`;
 
     formEValido = validaA(campoApreenchido.value)
     if (formEValido) {
@@ -33,7 +33,7 @@ campoApreenchido.addEventListener('keyup', function(e) {
 
     if (!formEValido) {
         campoApreenchido.classList.add('error');
-        document.querySelector('.error-message').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'block';
     } else {
         campoApreenchido.classList.remove('error');
         document.querySelector('.error-message').style.display = 'none';
