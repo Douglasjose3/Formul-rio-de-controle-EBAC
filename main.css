@@ -39,7 +39,7 @@ form {
     margin-top: 40px;
 }
 
-.success-message {
+.success_message {
     margin-left: auto;
     margin-right: auto;
     max-width: 640px;
@@ -50,17 +50,15 @@ form {
     display: none;
 }
 
-.error-message {
-    font-size: 12px;
-    padding: 8px;
-    background-color: red;
-    color: #fff;
+.error_message {
     margin-left: auto;
     margin-right: auto;
-    border-radius: 6px;
+    max-width: 640px;
+    border-radius: 10px;
+    background: rgb(255, 0, 0);
+    padding: 12px 15px;
+    color: #fff;
     display: none;
-    margin-top: -7px;
-    margin-bottom: 18px;
 }
 
 input, textarea {
@@ -131,10 +129,4 @@ button:active {
 .icon_send {
     margin-right: 10px;
     height: 25px;
-}
-
-input.error {
-    color: red;
-    border-color: red;
-    outline-color: red;
 }

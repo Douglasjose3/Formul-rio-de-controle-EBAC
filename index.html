@@ -15,15 +15,12 @@
     <header>
         <div class="container">
             <img class="logo_ebac" src="./Images/logo_ebac.png" alt="logo da EBAC">
-            <h1>Formulário de controle</h1>     
+            <h1>Formulário de controle</h1>  
         </div>
     </header>
     <form id="form-AB">
-        <input type="number" id="campo-A-preenchido" required placeholder="Digite o dia do seu aniversário!" />
-        <p class="error-message">
-            O dia do seu aniversário deve conter 2 digitos!
-        </p>
-        <input type="number22" id="campo-B-preenchido" required placeholder="Digite o ano do seu nascimento!" />
+        <input type="number" id="number_1" required placeholder="Digite o primeiro valor:" />
+        <input type="number" id="number_2" required placeholder="Digite o segundo valor:" />
         <button>
             <div class="wrapper">
                 <i class="bi bi-send"></i>
@@ -32,7 +29,9 @@
             <span>Enviar</span>
         </button>
     </form>
-    <p class="success-message"> </p>
+    <p class="success_message"></p>
+    <p class="error_message"></p>
+
     <script src="./main.js"></script>
         
 </body>

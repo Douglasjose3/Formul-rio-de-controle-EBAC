@@ -1,41 +1,43 @@
 const form = document.getElementById('form-AB');
-const campoApreenchido = document.getElementById('campo-A-preenchido');
-let formEValido = false;
 
-function validaA(campoA) {
-    const numeroAComoArray = campoA.split('');
-    return numeroAComoArray.length <= 2;
+const campoA = document.getElementById("number_1");
+const campoB = document.getElementById("number_2");
+
+const fieldA = campoA;
+const fieldB = campoB;
+
+let mensagemSucesso = false;
+
+function validaCampo(fieldA, fieldB) {
+    return fieldB > fieldA;
 }
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const campoBpreenchido = document.getElementById('campo-B-preenchido');
-    const mensagemSucesso = `O dia do seu aniversário é: <b>${campoApreenchido.value}</b> e o ano do seu nascimento é : <b>${campoBpreenchido.value}</b>.`;
+    const finalNumberA = parseFloat(campoA.value);
+    const finalNumberB = parseFloat(campoB.value);
 
-    formEValido = validaA(campoApreenchido.value)
-    if (formEValido) {
-        const containermensagemSucesso = document.querySelector('.success-message');
-        containermensagemSucesso.innerHTML = mensagemSucesso;
-        containermensagemSucesso.style.display = 'block';
+    const successMessage = `Está correto! O valor: ${fieldB.value} é maior que o valor: ${fieldA.value}.`;
+    const messageError = `Está incorreto! O valor: ${fieldA.value} é maior que o valor: ${fieldB.value}.`;
 
-        campoApreenchido.value = '';
-        campoBpreenchido.value = '';
+    formValido = validaCampo(finalNumberA, finalNumberB);
+    if (mensagemSucesso = true) {
+        const containerSuccess = document.querySelector('.success_message');
+        containerSuccess.innerHTML = successMessage;
+        containerSuccess.style.display = 'block';
+
+        fieldA.value = '';
+        fieldB.value = '';
+
     } else {
-        campoApreenchido.style.border = '1px solid red';
-        document.querySelector('.error-message').style.display = 'block';
-    }
-})
-
-campoApreenchido.addEventListener('keyup', function(e) {
-    console.log(e.target.value);
-    formEValido = validaA(e.target.value)
-
-    if (!formEValido) {
-        campoApreenchido.classList.add('error');
-        document.querySelector('.error-message').style.display = 'block';
-    } else {
-        campoApreenchido.classList.remove('error');
-        document.querySelector('.error-message').style.display = 'none';
-    }
+        if (!mensagemSucesso) {
+        const containerFail = document.querySelector('.error_message');
+        containerFail.innerHTML = messageError;
+        containerFail.style.display = 'block';
+        
+        fieldA.value = '';
+        fieldB.value = '';
+        };
+    };
 });
