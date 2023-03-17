@@ -19,10 +19,10 @@ form.addEventListener('submit', function(e) {
     const finalNumberB = parseFloat(campoB.value);
 
     const successMessage = `Está correto! O valor: ${fieldB.value} é maior que o valor: ${fieldA.value}.`;
-    const messageError = `Está incorreto! O valor: ${fieldA.value} é maior que o valor: ${fieldB.value}.`;
+    const messageError = `Está incorreto! O valor: ${fieldB.value} é maior que o valor: ${fieldA.value}.`;
 
     formValido = validaCampo(finalNumberA, finalNumberB);
-    if (mensagemSucesso = true) {
+    if (formValido = true) {
         const containerSuccess = document.querySelector('.success_message');
         containerSuccess.innerHTML = successMessage;
         containerSuccess.style.display = 'block';
@@ -31,7 +31,6 @@ form.addEventListener('submit', function(e) {
         fieldB.value = '';
 
     } else {
-        if (!mensagemSucesso) {
         const containerFail = document.querySelector('.error_message');
         containerFail.innerHTML = messageError;
         containerFail.style.display = 'block';
@@ -39,5 +38,4 @@ form.addEventListener('submit', function(e) {
         fieldA.value = '';
         fieldB.value = '';
         };
-    };
 });
