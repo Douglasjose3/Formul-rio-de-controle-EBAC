@@ -19,10 +19,10 @@ form.addEventListener('submit', function(e) {
     const finalNumberB = parseFloat(campoB.value);
 
     const successMessage = `Está correto! O valor: ${fieldB.value} é maior que o valor: ${fieldA.value}.`;
-    const messageError = `Está incorreto! O valor: ${fieldB.value} é maior que o valor: ${fieldA.value}.`;
+    const messageError = `Está incorreto! O valor: ${fieldB.value} é menor que o valor: ${fieldA.value}.`;
 
     formValido = validaCampo(finalNumberA, finalNumberB);
-    if (formValido = true) {
+    if (formValido) {
         const containerSuccess = document.querySelector('.success_message');
         containerSuccess.innerHTML = successMessage;
         containerSuccess.style.display = 'block';
