@@ -14,6 +14,8 @@ function validaCampo(fieldA, fieldB) {
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
+    const containerSuccess = document.querySelector('.success_message');
+    const containerFail = document.querySelector('.error_message');
 
     const finalNumberA = parseFloat(campoA.value);
     const finalNumberB = parseFloat(campoB.value);
@@ -23,17 +25,17 @@ form.addEventListener('submit', function(e) {
 
     formValido = validaCampo(finalNumberA, finalNumberB);
     if (formValido) {
-        const containerSuccess = document.querySelector('.success_message');
         containerSuccess.innerHTML = successMessage;
         containerSuccess.style.display = 'block';
+        containerFail.style.display='none';
 
         fieldA.value = '';
         fieldB.value = '';
 
     } else {
-        const containerFail = document.querySelector('.error_message');
         containerFail.innerHTML = messageError;
         containerFail.style.display = 'block';
+        containerSuccess.style.display='none';
         
         fieldA.value = '';
         fieldB.value = '';
